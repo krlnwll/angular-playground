@@ -1,10 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import { FormsModule }    from '@angular/forms';
+import { AppComponent }        from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
+import { HeroesComponent }     from './heroes.component';
+import { HeroService }         from './hero.service';
 
 @NgModule({
   imports: [
@@ -13,9 +13,13 @@ import { HeroDetailComponent } from './hero-detail.component';
   ],
   declarations: [
     AppComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroesComponent
+  ],
+  providers: [
+    HeroService
   ],
   bootstrap: [ AppComponent ]
 })
-export class AppModule { }
-
+export class AppModule {
+}
